@@ -12,11 +12,11 @@ How to use for localization:
 	```<load ="./locale.json" />```
 3. Use keys from locale.json in html:
 	```<p>{=$title}</p>```
-4.Result will be:
+4. Result will be:
 	```<p>Localization title text</p>```
 
-You can use different locale.json files in different folders:
-	- en
-	- es
-	- ru
-	- etc
+You can use different locale.json files in different folders:	
+- en
+- es
+- ru
+- etc
