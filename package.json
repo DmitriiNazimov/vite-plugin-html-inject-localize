@@ -1,7 +1,7 @@
 {
-	"name": "vite-plugin-html-inject",
-	"version": "1.0.4",
-	"description": "Split your index.html into multiple files and inject them where ever you want!",
+	"name": "vite-plugin-html-inject-localize",
+	"version": "1.0.0",
+	"description": "Split your index.html into multiple files and inject them where ever you want! And add localize, if you want.",
 	"files": [
 		"dist"
 	],
@@ -21,7 +21,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/donnikitos/vite-plugin-html-inject.git"
+		"url": "git+https://github.com/DmitriiNazimov/vite-plugin-html-inject-localize.git"
 	},
 	"keywords": [
 		"vite",
@@ -33,12 +33,9 @@
 		"html-loader",
 		"loader"
 	],
-	"author": "Nikita 'donnikitos' Nitichevski <me@donnikitos.com> (https://donnikitos.com/)",
+	"author": "Dmitrii Nazimov",
 	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/donnikitos/vite-plugin-html-inject/issues"
-	},
-	"homepage": "https://github.com/donnikitos/vite-plugin-html-inject#readme",
+	"homepage": "https://github.com/DmitriiNazimov/vite-plugin-html-inject-localize",
 	"dependencies": {},
 	"devDependencies": {
 		"@types/node": "^18.0.5",

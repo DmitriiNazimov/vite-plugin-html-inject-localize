@@ -20,6 +20,7 @@ type InjectHTMLConfig = {
 
 function injectHTML(cfg?: InjectHTMLConfig): Plugin {
 	let config: undefined | ResolvedConfig;
+	let lacaleData: any = null;
 
 	const fileList = new Set<string>();
 
@@ -39,6 +40,18 @@ function injectHTML(cfg?: InjectHTMLConfig): Plugin {
 			} else {
 				url = '/' + url;
 			}
+
+			if (url.includes('locale.json')) {
+				const localePath = normalizePath(path.join(root, url));
+				lacaleData = JSON.parse( fs.readFileSync(localePath, "utf8"));
+				code = code.replace(tag, '');
+				lacaleData = Object.entries(lacaleData).map(([key, value]) => `${key}="${value}"`).join(', ');
+				continue;
+			  }
+		
+			  if(lacaleData) {
+				attrs += lacaleData;
+			  }
 
 			if (!(url.endsWith('.htm') || url.endsWith('.html'))) {
 				['html', 'htm'].some((item) => {
